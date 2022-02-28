@@ -8,8 +8,12 @@ public class Main {
         // write your code here
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        System.out.println(Weekdays.valueOf(input.toUpperCase()));
-      //   Weekdays weekdays = Weekdays.ДУЙШОМБУ;
-     //    System.out.println(weekdays);
+        try {
+            System.out.println(Weekdays.valueOf(input.toUpperCase()));
+        } catch (IllegalArgumentException a) {
+            System.out.println("Сен туура эмес жаздын " + input);
+            //   Weekdays weekdays = Weekdays.ДУЙШОМБУ;
+            //    System.out.println(weekdays);
+        }
     }
 }
